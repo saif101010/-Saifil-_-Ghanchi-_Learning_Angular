@@ -1,9 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Hello World</title>
-</head>
-<body>
-<h1>My name is {{title}}</h1>
-</body>
-</html>
+<div class="container">
+  <h2>User Hobbies List</h2>
+  <div *ngFor="let user of userList" class="user-card">
+    <h2>{{ user.firstName }} {{ user.lastName }} </h2>
+    <p>ID: {{user.id}}</p>
+    <p>Hobby: {{user.hobby}} </p>
+    <p>Is the person Active? {{user.isActive ? 'Yes' : 'No'}}</p>
+  </div>
+</div>
