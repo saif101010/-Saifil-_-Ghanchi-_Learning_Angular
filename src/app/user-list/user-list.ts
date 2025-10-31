@@ -1,13 +1,14 @@
-import {Component, OnInit} from '@angular/core';
-import {UserListItem} from '../user-list-item/user-list-item';
-import {CommonModule} from '@angular/common';
-import {User} from '../Shared/Models/user';
-import {UserService} from '../services/user';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { User } from '../Shared/Models/user';
+import { UserListItem } from '../user-list-item/user-list-item';
+import { UserService} from '../services/user';
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [UserListItem, CommonModule],
+  imports: [UserListItem, CommonModule, RouterLink],
   templateUrl: './user-list.html',
   styleUrl: './user-list.css',
 })

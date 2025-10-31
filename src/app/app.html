@@ -1,7 +1,11 @@
-<div class="container">
-  <h2>Single User Details (ID: 3):</h2>
-  <app-user-list-item [user]="singleUser"></app-user-list-item>
-  <hr style="margin: 20px 0;">
-  <h2>Full User List:</h2>
-  <app-user-list></app-user-list>
+<div class="nav-bar">
+  <nav>
+    <a routerLink="/users" routerLinkActive="active">User List</a>
+    <a routerLink="/modify" routerLinkActive="active">Add New User</a>
+  </nav>
+</div>
+
+<div class="app-container">
+  <h1>{{ title }}</h1>
+  <router-outlet></router-outlet>
 </div>

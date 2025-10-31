@@ -1,0 +1,12 @@
+.user-list-item-link {
+  cursor: pointer;
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.user-list-item-link:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
