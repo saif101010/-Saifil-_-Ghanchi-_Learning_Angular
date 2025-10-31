@@ -5,8 +5,11 @@
     <p><strong>Hobby:</strong> {{ user.hobby }}</p>
     <p><strong>Status:</strong> {{ user.isActive ? 'Active' : 'Inactive' }}</p>
   </div>
+
+  <button (click)="goToEdit()">Edit User</button>
   <button (click)="goBack()">Back to List</button>
 </div>
+
 <ng-template #notFound>
   <p>User not found. Please go back to the list.</p>
   <button (click)="goBack()">Back to List</button>

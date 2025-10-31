@@ -1,1 +1,37 @@
-<p>modify-user works!</p>
+<div class="form-container">
+  <h2>{{ isEditMode ? 'Edit User' : 'Add New User' }}</h2>
+
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input id="firstName" type="text" formControlName="firstName">
+      <div *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched" class="error-message">
+        First name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input id="lastName" type="text" formControlName="lastName">
+      <div *ngIf="userForm.get('lastName')?.invalid && userForm.get('lastName')?.touched" class="error-message">
+        Last name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="hobby">Hobby</label>
+      <input id="hobby" type="text" formControlName="hobby">
+    </div>
+
+    <div class="form-group checkbox-group">
+      <input id="isActive" type="checkbox" formControlName="isActive">
+      <label for="isActive">Is Active</label>
+    </div>
+
+    <div class="button-group">
+      <button type="submit" [disabled]="userForm.invalid">{{ isEditMode ? 'Update User' : 'Add User' }}</button>
+      <button type="button" (click)="goBack()">Cancel</button>
+    </div>
+  </form>
+</div>

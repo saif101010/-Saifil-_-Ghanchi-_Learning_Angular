@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { User } from '../Shared/Models/user';
-import {UserService} from '../services/user';
+import { UserService} from '../services/user';
 
 @Component({
   selector: 'app-user-detail',
@@ -26,6 +26,13 @@ export class UserDetail implements OnInit {
       this.userService.getUser(+userId).subscribe(user => {
         this.user = user;
       });
+    }
+  }
+
+
+  goToEdit(): void {
+    if (this.user) {
+      this.router.navigate(['/modify', this.user.id]);
     }
   }
 
