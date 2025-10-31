@@ -4,5 +4,5 @@ export interface User {
   lastName: string;
   hobby: string;
   isActive?: boolean;
-
+  imageUrl?: string;
 }

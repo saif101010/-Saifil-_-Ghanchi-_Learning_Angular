@@ -1,11 +1,10 @@
 import {Component, Input} from '@angular/core';
 import {User} from '../Shared/Models/user';
-import { CommonModule} from '@angular/common';
-
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 @Component({
   selector: 'app-user-list-item',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, NgOptimizedImage],
   templateUrl: './user-list-item.html',
   styleUrl: './user-list-item.css',
 })

@@ -3,6 +3,17 @@
   padding: 15px;
   border-radius: 8px;
   margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-info {
+  flex-grow: 1;
+}
+
+.user-image img {
+  object-fit: cover;
 }
 
 h2 {

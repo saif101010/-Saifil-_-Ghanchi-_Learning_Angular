@@ -1,5 +1,11 @@
-<div class="user-card" *ngIf="user" [ngClass]="{'even-row': (index ?? 0) % 2 === 0, 'odd-row': (index ?? 0) % 2 !== 0}">  <h2>{{ user.firstName }} {{ user.lastName }}</h2>
-  <p>ID: {{ user.id }}</p>
-  <p>Hobby: {{ user.hobby }}</p>
-  <p>Is the person Active? {{ user.isActive ? 'Yes' : 'No' }}</p>
+<div class="user-card" *ngIf="user" [ngClass]="{'even-row': (index ?? 0) % 2 === 0, 'odd-row': (index ?? 0) % 2 !== 0}">
+  <div class="user-info">
+    <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+    <p>ID: {{ user.id }}</p>
+    <p>Hobby: {{ user.hobby }}</p>
+    <p>Is the person Active? {{ user.isActive ? 'Yes' : 'No' }}</p>
+  </div>
+  <div class="user-image" *ngIf="user.imageUrl">
+    <img [ngSrc]="user.imageUrl" alt="User Avatar" width="80" height="80">
+  </div>
 </div>
