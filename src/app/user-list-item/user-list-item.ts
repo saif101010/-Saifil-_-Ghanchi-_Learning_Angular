@@ -11,4 +11,5 @@ import { CommonModule} from '@angular/common';
 })
 export class UserListItem {
   @Input() user?: User;
+  @Input() index?: number = 0;
 }

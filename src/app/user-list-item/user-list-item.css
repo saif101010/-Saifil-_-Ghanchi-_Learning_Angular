@@ -9,3 +9,11 @@ h2 {
   margin-top: 0;
   color: #0056b3;
 }
+
+.even-row {
+  background-color: pink;
+}
+
+.odd-row {
+  background-color: teal;
+}

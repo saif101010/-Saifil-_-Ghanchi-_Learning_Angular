@@ -6,7 +6,7 @@ import {UserListComponent} from './user-list/user-list';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NgForOf, UserListComponent],
+  imports: [ UserListComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
