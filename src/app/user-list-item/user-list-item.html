@@ -1,1 +1,6 @@
-<p>user-list-item works!</p>
+<div class="user-card" *ngIf="user">
+  <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+  <p>ID: {{ user.id }}</p>
+  <p>Hobby: {{ user.hobby }}</p>
+  <p>Is the person Active? {{ user.isActive ? 'Yes' : 'No' }}</p>
+</div>
