@@ -1,14 +1,7 @@
-import {Component, Input} from '@angular/core';
-import {User} from '../Shared/Models/user';
-import { CommonModule, NgOptimizedImage } from '@angular/common';
-@Component({
-  selector: 'app-user-list-item',
-  standalone: true,
-  imports: [CommonModule, NgOptimizedImage],
-  templateUrl: './user-list-item.html',
-  styleUrl: './user-list-item.css',
-})
-export class UserListItem {
-  @Input() user?: User;
-  @Input() index?: number = 0;
+// student-list.component.ts
+ngOnInit(): void {
+  console.log('Custom Pipe Initialized - Version 2.0.'); // <-- ADD THIS
+  this.studentService.getStudents().subscribe(students => {
+    this.userList = students;
+  });
 }

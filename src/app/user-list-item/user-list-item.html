@@ -9,3 +9,5 @@
   <!-- Pipe 3: CurrencyPipe -->
   <td>{{ student.tuition | currency:'CAD':'symbol' }}</td>
 </tr>
+<!-- Now you can pass the whole student object to the pipe -->
+<td>{{ student | fullName }}</td>
